@@ -1,15 +1,16 @@
 :root {
-  --font-primary: 'Playfair Display', serif;
-  --font-secondary: 'Montserrat', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
 
-  --color-dark: #222831;
-  --color-mid: #393E46;
-  --color-light: #EEEEEE;
-  --color-accent-green: #A4BE7B;
-  --color-accent-gold: #E5B878;
+  --color-background: #1a1a1a; /* Dark charcoal */
+  --color-surface: #2c2c2c; /* Slightly lighter for cards */
+  --color-text: #f0f0f0; /* Off-white */
+  --color-text-muted: #a0a0a0; /* Muted text */
+  --color-primary: #c5a47e; /* A sophisticated gold/tan */
+  --color-secondary: #6b8e23; /* Olive green */
 
   --container-width: 1120px;
-  --section-padding: 4rem 0;
+  --section-padding: 5rem 0;
 }
 
 *,
@@ -25,27 +26,27 @@ html {
 }
 
 body {
-  font-family: var(--font-secondary);
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  line-height: 1.6;
-  font-size: 16px;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 17px;
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-primary);
-  color: var(--color-accent-gold);
-  line-height: 1.2;
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.3;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 p {
@@ -53,13 +54,13 @@ p {
 }
 
 a {
-  color: var(--color-accent-green);
+  color: var(--color-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-accent-gold);
+  color: var(--color-primary);
 }
 
 img {
@@ -76,8 +77,8 @@ ul {
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .section {
@@ -86,31 +87,35 @@ ul {
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-accent-green);
-  color: var(--color-dark);
+  padding: 0.8rem 1.8rem;
+  background-color: var(--color-primary);
+  color: var(--color-background);
   font-weight: 700;
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border: 2px solid var(--color-primary);
 }
 
 .btn:hover {
-  background-color: var(--color-accent-gold);
+  background-color: transparent;
   transform: translateY(-2px);
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   :root {
-    --section-padding: 3rem 0;
+    --section-padding: 3.5rem 0;
+  }
+  body {
+    font-size: 16px;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }

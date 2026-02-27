@@ -15,11 +15,12 @@ const Header = () => {
           <div className={`nav-links ${isOpen ? 'open' : ''}`}>
             <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
             <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+            <a href="#specials" onClick={() => setIsOpen(false)}>Specials</a>
             <a href="#menu" onClick={() => setIsOpen(false)}>Menu</a>
             <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
           </div>
           <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-            &#9776;
+            {isOpen ? <>&times;</> : <>&#9776;</>}
           </button>
         </nav>
       </div>
