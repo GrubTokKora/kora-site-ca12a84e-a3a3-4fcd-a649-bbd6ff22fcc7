@@ -7,7 +7,7 @@ const Hero = () => {
         <p>
           Lively restaurant serving global cuisine & cocktails amid plant-filled, industrial-chic decor.
         </p>
-        <a href="#menu" className="btn">Explore Our Menu</a>
+        <a href="#menu" className="btn">View Our Menu</a>
       </div>
     </section>
   );
